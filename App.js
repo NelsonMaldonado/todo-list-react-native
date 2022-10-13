@@ -9,6 +9,8 @@ import {
   TextInput,
   TouchableOpacity,
   Keyboard,
+  FlatList,
+  ScrollView,
 } from "react-native"
 
 export default function App() {
@@ -33,17 +35,22 @@ export default function App() {
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Note taker</Text>
         <Text>Write down subjects you would like to review</Text>
-        <VideoPlayer style={styles.videostyle}></VideoPlayer>
 
-        <View style={styles.items}>
-          {tasktItems.map((item, index) => {
-            return (
-              <TouchableOpacity key={index} onPress={() => completeTask(index)}>
-                <Task text={item} />
-              </TouchableOpacity>
-            )
-          })}
-        </View>
+        <VideoPlayer style={styles.videostyle}></VideoPlayer>
+        <ScrollView>
+          <View style={styles.items}>
+            {tasktItems.map((item, index) => {
+              return (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => completeTask(index)}
+                >
+                  <Task text={item} />
+                </TouchableOpacity>
+              )
+            })}
+          </View>
+        </ScrollView>
       </View>
 
       {/*Write a task*/}

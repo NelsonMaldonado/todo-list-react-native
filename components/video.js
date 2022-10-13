@@ -1,14 +1,12 @@
 import React from "react"
-import { View, Text, StyleSheet, ScrollView } from "react-native"
+import { View, Text, StyleSheet } from "react-native"
 
 const VideoPlayer = () => {
   return (
     <View>
-      <ScrollView>
-        <Text style={styles.videotext}>
-          What would you like to buy today Nelly?
-        </Text>
-      </ScrollView>
+      <Text style={styles.videotext}>
+        What would you like to buy today Nelly?
+      </Text>
     </View>
   )
 }
