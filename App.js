@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Task from "./components/Task"
+import VideoPlayer from "./components/video"
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -32,6 +33,7 @@ export default function App() {
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Note taker</Text>
         <Text>Write down subjects you would like to review</Text>
+        <VideoPlayer style={styles.videostyle}></VideoPlayer>
 
         <View style={styles.items}>
           {tasktItems.map((item, index) => {
@@ -52,7 +54,7 @@ export default function App() {
       >
         <TextInput
           style={styles.input}
-          placeholder={"Please write something here"}
+          placeholder={"Type a subject to study"}
           value={task}
           onChangeText={(text) => setTask(text)}
         />
