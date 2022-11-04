@@ -9,7 +9,6 @@ import {
   TextInput,
   TouchableOpacity,
   Keyboard,
-  FlatList,
   ScrollView,
 } from "react-native"
 
