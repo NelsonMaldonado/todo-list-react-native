@@ -1,12 +1,10 @@
 import React from "react"
 import { View, Text, StyleSheet } from "react-native"
 
-const VideoPlayer = () => {
+const MainTitle = () => {
   return (
     <View>
-      <Text style={styles.videotext}>
-        What would you like to buy today Nelly?
-      </Text>
+      <Text style={styles.videotext}>Write down your goals for today</Text>
     </View>
   )
 }
@@ -23,4 +21,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default VideoPlayer
+export default MainTitle

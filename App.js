@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Task from "./components/Task"
-import VideoPlayer from "./components/video"
+import MainTitle from "./components/MainT"
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -32,10 +32,10 @@ export default function App() {
     <View style={styles.container}>
       {/* Today's Tasks*/}
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Note taker</Text>
-        <Text>Write down subjects you would like to review</Text>
+        <Text style={styles.sectionTitle}>Todo Mobile App by: </Text>
+        <Text>Nelson Maldonado</Text>
 
-        <VideoPlayer style={styles.videostyle}></VideoPlayer>
+        <MainTitle style={styles.videostyle}></MainTitle>
         <ScrollView>
           <View style={styles.items}>
             {tasktItems.map((item, index) => {
